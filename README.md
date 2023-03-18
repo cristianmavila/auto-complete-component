@@ -28,3 +28,7 @@
 
 - `npm install`
 - `npm run start`
+
+### Live version on Vercel
+
+[https://auto-complete-component-xi.vercel.app/] (https://auto-complete-component-xi.vercel.app/)
