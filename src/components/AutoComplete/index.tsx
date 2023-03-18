@@ -15,7 +15,10 @@ const AutoComplete = () => {
         .then((results) => {
           setFilteredResults([...results]);
         })
-        .catch((error) => console.log("There is a error with the Fake API"));
+        .catch((error) => {
+          setFilteredResults([]);
+          console.log("There is a error with the Fake API");
+        });
   };
 
   const handleClickResult = (value: string) => {
@@ -23,6 +26,7 @@ const AutoComplete = () => {
     setFilteredResults([]);
   };
 
+  /// For a production version I think will be required to move that function into a folder called services or provide that results using GraphQL or API REST.
   const searchResults = async (input: string): Promise<Results[]> => {
     return new Promise((resolve) => {
       setTimeout(() => {
